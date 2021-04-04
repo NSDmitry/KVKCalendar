@@ -38,12 +38,7 @@ final class DayPhoneCell: DayCell {
         contentView.addSubview(titleLabel)
         contentView.addSubview(dotView)
 
-        if let radius = style.headerScroll.dotCornersRadius {
-            dotView.setRoundCorners(style.headerScroll.dotCorners, radius: radius)
-        } else {
-            let value = dotView.frame.width / 2
-            dotView.setRoundCorners(style.headerScroll.dotCorners, radius: CGSize(width: value, height: value))
-        }
+        dotView.setRoundCorners(radius: CGSize(width: 4, height: 4))
     }
     
     required init?(coder aDecoder: NSCoder) {
